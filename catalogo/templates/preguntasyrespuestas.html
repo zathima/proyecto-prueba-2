@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+<title> Preguntas Duoc </title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="css/style4.css">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" type="text/css" href="css\bootstrap.min.css">
+<script type="text/javascript" src="js\jquery-3.4.1.js"></script>
+<script type="text/javascript" src="F:js\funciones.js"></script>
+</head>
+
+<body class="text-white">
+
+<div class="container">
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark"> <!-- Se declara el menu de navegacion con un tipo drak (oscuro) fixed-top sirve para que abarque todo el largo de la pagina  !-->
+      <p class="navbar-brand" > DUOC RESPUESTAS !</p> 
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="Paginadeinicio.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Registro.html">Registrate</a>
+      </li>
+	  <li class="nav-item">
+        <a class="nav-link" href="iniciosesiom.html">Login</a>
+      </li>
+    </ul>
+	</nav>
+</div>
+
+</div>
+<br>
+<br>
+<br>
+<br>
+
+
+<div class="div-pregunta">
+<h2 class="h2-preguntar">  Hace una pregunta ! </h2>
+<textarea class="txt" name="areadetexto" id="pregunta" rows="5" cols="50"> </textarea>
+<br>
+<br>
+<input type="button" class="btn btn-lg btn-primary" value="Enviar" onclick="EnviarPregunta()"> </input>
+</div>
+
+<div class="div-tabla">
+<h2 class="h2-preguntas">  Preguntas destacadas ! </h2>
+
+<table  class="tabla-pregunta" style=" black 5px solid">
+<tr>
+<td>
+<p> <img src="img/anon.png" class="img-usuario"  > dice:</p>
+</td>
+
+<td>
+<p>  ¿Es necesario un cambio en el sistema de inscripcion de ramos ? </p>
+</td>
+
+</tr>
+<th> <h5> Anonimo669 <h5> <th>
+
+</table>
+
+<th> <h5> Respuestas: </h5> <th>
+
+<table class="tabla-respuestas" style="black 5px solid">
+<tr>
+<td>
+<p><img src="img/anon.png" class="img-usuario"> dice:</p>
+</td>
+
+<td>
+<p>    Yo creo que si por que este semestre no logre tomar todos mis ramos  </p>
+</td>
+
+</tr>
+<th> <h5> Anonimo869 <h5> <th>
+</table>
+<div>
+<br>
+<br>
+<form class="seccionPregunta">
+<h5>  Comenta algo ! <h5>
+<textarea  class="txt" name="comentario" rows="2" cols="50" id="comentario"> </textarea>
+<br>
+<input type="button" class="btn btn-lg btn-primary" value="Comentar" onclick="EnviarComentario()" > </input>
+<form>
+
+
+<script src="js\jquery-3.4.1.js"></script>
+<script src="css\bootstrap.min.css"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+<script language="JavaScript">
+function EnviarPregunta()
+{
+var pregunta = document.getElementById("pregunta").value;
+if(pregunta=="")
+{
+alert("Tienes que hacer una pregunta antes de enviar");
+}
+else
+{
+alert("Tu pregunta : "+pregunta+" Se a posteado exitosamente");
+
+}
+
+}
+
+function EnviarComentario()
+{
+var comentario = document.getElementById("comentario").value;
+if(comentario==" ")
+{
+alert("Tienes que hacer un comentario antes de enviar");
+}
+else
+{
+alert("Tu Comentario : "+comentario+" Se a posteado exitosamente");
+
+}
+
+}
+
+
+
+</script>
+
+
+
+</body>
+</html>

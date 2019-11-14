@@ -1,0 +1,43 @@
+
+form {
+	float:center;
+
+    display: inline-block;
+    text-align: center;
+
+}
+body
+{
+	font-family: times new roman;
+    background-image: url("../img/negro.png");
+}
+
+
+h1{
+text-align:center;
+
+}
+
+
+th
+{
+	height:100px;
+}
+
+
+
+.navbar-expand
+{
+	-sm|-md|-lg|-xl
+
+}
+
+button
+{
+    height:50px; 
+    width:100px; 
+    margin: -20px -50px; 
+    position:relative;
+    top:50%; 
+    left:50%;
+}

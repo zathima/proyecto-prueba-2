@@ -1,0 +1,35 @@
+body {
+	background-image: url("../img/negro.png");
+}
+
+H3 {
+	font-family: times new roman;
+}
+
+@media ( max-width: 900px) {
+    #main{
+        height: auto;
+    }
+       .col {
+        width: 100%;
+        float: none;
+        margin:0;
+        padding-left:0;
+    }
+	
+.carousel-item 
+{
+  height: 65vh;
+  min-height: 300px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.carousel-item.active,
+.carousel-item-next,
+.carousel-item-prev {
+  display: block;
+}
