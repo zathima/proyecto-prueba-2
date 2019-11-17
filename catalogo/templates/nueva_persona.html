@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es ">
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+{% load static %}
+<link rel="stylesheet" href="{% static 'core\css\styleinicio.css' %}">
+<script type="text/javascript" src="{% static 'core\js\jquery-3.4.1.js' %}"></script>
+<script type="text/javascript" src="{% static 'core\js\funciones.js' %}"></script>
+<link rel="stylesheet" href="{% static 'core\css\bootstrap.min.css' %}">
+
+
+<title> DUOC RESPUESTAS </title>
+</head>
+
+<body class="text-white" >
+
+<div class="container"> <!--Div con nombre designado contenedor !-->
+ <br><!-- Salto de linea !-->
+ <header>
+      <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark"> <!-- Se declara el menu de navegacion con un tipo drak (oscuro) fixed-top sirve para que abarque todo el largo de la pagina  !-->
+      <p class="navbar-brand" > DUOC RESPUESTAS !</p> 
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="iniciosesiom.html">Login <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="registro.html">Registrate</a>
+      </li>
+    </ul>
+  </div>
+  
+</nav>
+ </header>
+</div>
+<br>
+<br>
+  <h2> Nuevo usuario <h2>
+  <form action"" method="POST">
+    {% csrf_token %}
+    <table>
+      {{  form.as_table  }}
+    </table>
+
+      <input type="reset" value="Limpiar">
+      <input type="submit" value="Guardar">
+  </form> 
+  {{ mensaje }}
+
+</body>
+</html>

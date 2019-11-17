@@ -7,12 +7,12 @@ import uuid
 # Create your models here.
 class Persona(models.Model):
 
-	field_name = models.CharField(max_length=200, help_text='Nombre de la Persona')
-	field_last_name = models.CharField(max_length=200, help_text='Apellido de la Persona')
-	field_password =models.CharField(max_length=200, help_text='Contraseña' )
+	field_name = models.CharField(max_length=200)
+	field_last_name = models.CharField(max_length=200)
+	field_password =models.CharField(max_length=200)
 	field_email =models.EmailField(blank=True)
-	field_age =models.IntegerField(help_text='edad de la Persona', default=18)
-	field_phone =models.CharField(max_length=200, help_text='Numero de telefono')
+	field_age =models.IntegerField(default=18)
+	field_phone =models.CharField(max_length=200)
 
 
 
@@ -23,17 +23,17 @@ class Persona(models.Model):
 		return reverse('Persona-detail', args=[str(self.id)])
 
 	def __str__(self):
-		return f'{self.field_last_name}, {self.field_name}, {self.field_age}'
+		return f'{self.field_name}'
 
 
 class Pregunta(models.Model):
-	field_context =models.TextField(help_text='Contenido de la pregunta')
+	field_context =models.TextField()
 	field_sender =models.ForeignKey('Persona', on_delete=models.SET_NULL, null=True)
 
 	def __str__(self):
 		return self.field_context
 
 	def get_absolute_url(self):
-		return reverse('Preguna-detail', args=[str(self.id)])	
+		return reverse('Pregunta-detail', args=[str(self.id)])	
 
 
