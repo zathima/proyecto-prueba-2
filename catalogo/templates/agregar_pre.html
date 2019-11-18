@@ -31,13 +31,16 @@
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="iniciosesiom.html">Login <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="registro.html">Registrate</a>
+        <a class="nav-link" href="nueva_persona.html">Registrate</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="modificar_pre.html">Modificar</a>
+        <a class="nav-link" href="persona_list">Listado de preguntas</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="listar_persona">Listado de personas</a>
       </li>
     </ul>
   </div>
@@ -48,15 +51,21 @@
 <br>
 <br>
 <br>
-<h1>Hola</h1>
-<form action="" method="POST">
+<center>
+<h3>Crea una pregunta</h3>
+<br>
+<form action="" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     <table>
        {{ form.as_table }}
     </table>
+    <br>
     <input type="reset" value="Limpiar">
-    <input type="submit" value="Modificar">
+    <input type="submit" value="Crear o Modificar">
 </form>
- {{ mensaje }}
+{{ mensaje }}
+
+</center>
+
 </body>
 </html>

@@ -28,10 +28,7 @@
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="iniciosesiom.html">Login <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="registro.html">Registrate</a>
+        <a class="nav-link" href="">Al modificar persona vuelva atras con el navegador 2 veces y luego actualize la pagina para ver su pregunta creada <span class="sr-only">(current)</span></a>
       </li>
     </ul>
   </div>
@@ -41,19 +38,25 @@
 </div>
 <br>
 <br>
-<h2> Modificar usuario <h2>
-  <form action"" method="POST">
+
+<center>
+
+<h3> Modificar usuario </h3>
+<br>
+<form action="" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     <table>
       {{  form.as_table  }}
     </table>
-
+    <br>
+    <br>
       <input type="reset" value="Limpiar">
-      <input type="submit" value="Guardar">
-  </form> 
-  {{ mensaje }}
+      <input type="submit" value="Guardar cambios">
+</form> 
 
+{{ mensaje }}
 
+</center>
 
 </body>
 </html>

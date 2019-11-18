@@ -1,0 +1,32 @@
+tutorial para iniciar pagina Duoc respuestas
+
+iniciar cmd
+cd desktop
+
+(si se posee un ambiente virtual inicie en este ej: workon django_ambiente_virtual)
+
+pip3 install django
+pip install pillow
+
+(no se utiliza git init ya que no se creara un nuevo repositorio)
+
+git config --global user.name (ej: zathima)
+git config --global user.email (ej: zathima@gmail.com)
+
+git add --all
+git commit -m (ej: "proyecto prueba 2" )
+
+git clone https://github.com/zathima/proyecto-prueba-2.git
+
+(se creara la carpeta que contiene el proyecto)
+
+cd prueba2
+
+python manage.py makemigrations
+python manage.py migrate
+
+python manage.py runserver
+
+http://127.0.0.1:8000/catalogo/
+
+y a usar la pagina

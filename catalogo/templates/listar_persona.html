@@ -28,10 +28,16 @@
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="iniciosesiom.html">Login <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="registro.html">Registrate</a>
+        <a class="nav-link" href="nueva_persona.html">Registrate</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="agregar_pre.html">Crear nueva pregunta</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="persona_list">Listado de preguntas</a>
       </li>
     </ul>
   </div>
@@ -47,8 +53,11 @@
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
   <script src="{% static 'core\js\confirmacion.js' %}"></script>
 {% endblock %}
-<h2> Lista de usuarios  <h2>
 
+<center>
+
+<h3> Lista de usuarios </h3>
+<br>
 <table>
     <tr>
       <th>Nombre </th>
@@ -74,9 +83,9 @@
 
 
     {% endfor %} 
-
-
 </table>
+
+</center>
 
 </body>
 </html>

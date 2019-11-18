@@ -14,7 +14,7 @@ class PersonaForm(ModelForm):
 	
 	class  Meta: 
 		model = Persona
-		fields = ['field_name', 'field_last_name', 'field_password', 'field_email', 'field_age', 'field_phone' ]
+		fields = ['field_name', 'field_last_name', 'field_password', 'field_email', 'field_age', 'field_phone', 'field_image' ]
 			
 
 

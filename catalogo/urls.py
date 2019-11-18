@@ -1,6 +1,8 @@
 from django.urls import path 
 from .views import home, registro, login, preguntasyrespuestas, persona_list, nueva_pregunta, modificar_pregunta, eliminar_pregunta, nueva_persona, listar_persona, modificar_persona, eliminar_persona
 from . import views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [ 
     path('', home, name="home"),
@@ -18,6 +20,6 @@ urlpatterns = [
     path('listar_persona', listar_persona, name="listar_persona"),
     path('modificar_persona/<id>/', modificar_persona, name="modificar_persona"),
     path('eliminar_per/<id>/',eliminar_persona, name="eliminar_per"),
-
 ] 
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

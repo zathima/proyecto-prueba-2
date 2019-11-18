@@ -16,7 +16,7 @@ def modificar_persona(request, id):
         'form': PersonaForm(instance=persona)
     }
     if request.method =='POST':
-        formulario = PersonaForm(data=request.POST, instance=persona)
+        formulario = PersonaForm(data=request.POST, instance=persona, files=request.FILES )
         if formulario.is_valid():
             formulario.save()
             data['mensaje'] = "Persona Modificada Correctamente"
@@ -67,7 +67,7 @@ def nueva_persona(request):
 
     }
     if request.method == 'POST':
-        formulario = PersonaForm(request.POST)
+        formulario = PersonaForm(request.POST, files=request.FILES)
         if formulario.is_valid():
             formulario.save()
             data['mensaje']= "Guardado correctamente"

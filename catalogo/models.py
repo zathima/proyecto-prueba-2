@@ -13,6 +13,7 @@ class Persona(models.Model):
 	field_email =models.EmailField(blank=True)
 	field_age =models.IntegerField(default=18)
 	field_phone =models.CharField(max_length=200)
+	field_image =models.ImageField(null=True, blank=True)
 
 
 
