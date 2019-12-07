@@ -24,7 +24,7 @@ class Persona(models.Model):
 		return reverse('Persona-detail', args=[str(self.id)])
 
 	def __str__(self):
-		return f'{self.field_name}'
+		return self.field_name
 
 
 class Pregunta(models.Model):
